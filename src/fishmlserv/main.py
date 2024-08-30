@@ -27,7 +27,7 @@ def fish(length:float, weight:float):
     if length > 30.0:
         prediction = "도미"
     else:
-        prediction = "방어"
+        prediction = "빙어"
     return {
                 "prediction": prediction,
                 "length": length,

@@ -1,6 +1,6 @@
 from typing import Union
 from fastapi import FastAPI
-from src.fishmlserv.model.manager import get_model_path
+from fishmlserv.model.manager import get_model_path
 from sklearn.neighbors import KNeighborsClassifier
 import pickle
 

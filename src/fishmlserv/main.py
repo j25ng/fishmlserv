@@ -1,5 +1,8 @@
 from typing import Union
 from fastapi import FastAPI
+from src.fishmlserv.model.manager import get_model_path
+from sklearn.neighbors import KNeighborsClassifier
+import pickle
 
 app = FastAPI()
 
@@ -25,17 +28,12 @@ def fish(length:float, weight:float):
     ```
     """
     ### 모델 불러오기
-    #with open("/home/kyuseok00/code/fishmlserv/note/model.pkl", "rb") as f:
-    #    fish_model = pickle.load(f)
+    with open(get_model_path(), "rb") as f:
+        fish_model = pickle.load(f)
 
-    fish_class = "몰라"
+    pred = fish_model.predict([[length, weight]])[0]
 
-    #if length > 30.0:
-    #    prediction = "도미"
-    #else:
-    #    prediction = "빙어"
-    return {
-                "prediction": fish_class,
-                "length": length,
-                "weight": weight
-            }
+    if pred == 1:
+        return "도미"
+    else:
+        return "빙어" 

@@ -1,5 +1,6 @@
 #FROM python:3.8
-FROM python:3.8.19-slim-bullseye
+# 용량 작은 버전
+FROM python:3.8.19-slim-bullseye #
 
 WORKDIR /code
 

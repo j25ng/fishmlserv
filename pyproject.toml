@@ -1,6 +1,6 @@
 [project]
 name = "fishmlserv"
-version = "0.8.3"
+version = "0.8.4"
 description = "Serving Machine Learning Model - using sklearn(KNeighborsClassifier) using FastApi, Fly.io"
 authors = [
     {name = "j25ng", email = "jsan2861@gmail.com"},
@@ -24,6 +24,3 @@ note = [
     "notebook>=7.2.2",
     "matplotlib>=3.7.5",
 ]
-
-[tool.poetry.dependencies]
-scikit-learn = "1.3.2"

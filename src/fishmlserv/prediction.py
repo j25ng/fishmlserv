@@ -4,6 +4,15 @@ import pickle
 import fire
 
 def prediction(l, w):
+    """
+    물고기 종류 판별기
+
+    물고기 길이(l)와 무게(w) 기반으로 종류를 예측
+    
+    Args:
+        l (float): 물고기 길이(cm)
+        w (float): 물고기 무게(g)
+    """
     with open(get_model_path(), "rb") as f:
         fish_model = pickle.load(f)
 

@@ -7,7 +7,6 @@ authors = [
 ]
 dependencies = [
     "fire>=0.6.0",
-    "scikit-learn=1.3.2",
 ]
 requires-python = ">=3.8"
 readme = "README.md"
@@ -25,3 +24,6 @@ note = [
     "notebook>=7.2.2",
     "matplotlib>=3.7.5",
 ]
+
+[tool.poetry.dependencies]
+scikit-learn = "1.3.2"

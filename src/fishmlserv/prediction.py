@@ -14,8 +14,5 @@ def prediction(l, w):
     else:
         return "빙어"
 
-if __name__ == "__main__":
-    fire.Fire(prediction)
-
 def main():
     fire.Fire(prediction)

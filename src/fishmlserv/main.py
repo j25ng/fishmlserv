@@ -6,6 +6,9 @@ import pickle
 
 app = FastAPI()
 
+with open(get_model_path(), "rb") as f:
+        fish_model = pickle.load(f)
+
 @app.get("/")
 def read_root():
         return {"Hello": "world"}
@@ -28,8 +31,8 @@ def fish(length:float, weight:float):
     ```
     """
     ### 모델 불러오기
-    with open(get_model_path(), "rb") as f:
-        fish_model = pickle.load(f)
+#    with open(get_model_path(), "rb") as f:
+#        fish_model = pickle.load(f)
 
     pred = fish_model.predict([[length, weight]])[0]
 

@@ -44,6 +44,13 @@ root@3b34ff0aac1d:/code# exit
 # 로그 확인
 $ sudo docker logs -f <CONTAINER ID|NAMES>
 ```
+
+### LBw
+```bash
+$ sudo docker build -t ml-lb:1.5.0 LB/
+$ sudo docker run --name nginx_lb-3 -d -p 8765:80 --link ml-1 --link ml-2 --name lb-2 ml-lb:1.5.0
+```
+
 ### Fly.io
 ```
 $ fly launch --no-deploy

@@ -2,6 +2,7 @@
 #FROM python:3.8
 #FROM python:3.8.19-slim-bullseye
 #FROM python:3.8.19-alpine3.20
+FROM j25ng/fishmlserv:0.8.4
 
 WORKDIR /code
 

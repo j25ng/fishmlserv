@@ -1,5 +1,6 @@
-fish_test_data.csv
+*.csv
 LB
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
